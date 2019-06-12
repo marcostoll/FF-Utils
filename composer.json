@@ -1,0 +1,29 @@
+{
+  "name": "fastforward/utils",
+  "description": "A component providing supporting used by other FF components - part of the Fast Forward Components Collection",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Marco Stoll",
+      "email": "marco@fast-forward-encoding.de",
+      "homepage": "http://marcostoll.de",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8"
+  },
+  "autoload": {
+    "psr-4": {
+      "FF\\Utils\\": "src/"
+    },
+    "classmap": [
+      "src/"
+    ]
+  }
+}
