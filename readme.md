@@ -1,27 +1,36 @@
-FF\Utils | Fast Forward Components Collection
-===============================================================================
+FF\Utils | Fast Forward Family
+========================================================================================================================
 
 by Marco Stoll
 
 - <marco.stoll@rocketmail.com>
 - <http://marcostoll.de>
 - <https://github.com/marcostoll>
-- <https://github.com/marcostoll/FF-Common>
+- <https://github.com/marcostoll/FF>
+- <https://github.com/marcostoll/FF-Utils>
 ------------------------------------------------------------------------------------------------------------------------
 
-# What is the Fast Forward Components Collection?
-The Fast Forward Components Collection, in short **Fast Forward** or **FF**, is a loosely coupled collection of code 
-repositories each addressing common problems while building web application. Multiple **FF** components may be used 
-together if desired. And some more complex **FF** components depend on other rather basic **FF** components.
+# What is the Fast Forward Family?
+Fast Forward, in short **FF**, is a template for building web applications. The **FF Family** is a series of basic
+repositories on which **FF** depends on but may also be used independently if desired.
 
-**FF** is not a framework in and of itself and therefore should not be called so. 
-But you may orchestrate multiple **FF** components to build an web application skeleton that provides the most common 
-tasks.
+**FF** is not a framework in and of itself and therefore should not be called so. But you may orchestrate multiple 
+**FF** components to build an web application skeleton that provides the most common tasks.
 
-# Introduction
+# Introduction - What is FF\Utils?
 
 The Utils component provides generic functionality used by many other **FF** components. You seldom want to require
 this library by itself. In most cases you will get it by requiring one of the more complex **FF** components.
+
+# Installation
+
+## via Composer
+
+@todo
+
+## manual Installation
+
+@todo
 
 # The Utils
 
