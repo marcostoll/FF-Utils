@@ -25,7 +25,7 @@ class ArrayUtilsTest extends TestCase
     const ARR_ASSOC_A = ['a' => 'A', 'b' => 'B'];
     const ARR_ASSOC_B = ['c' => 'C', 'a' => ['D', 'E']];
     const ARR_REC_A = ['X' => ['a' => 'A', 'b' => ['B1', 'B2'], 'c' => 'C'], 'Y' => ['M', 'N']];
-    const ARR_REC_B = ['X' => ['b' => ['B3'], 'c' => 'new C', 'd' => 'D'], 'Z' => ['Q' => 'R']];
+    const ARR_REC_B = ['X' => ['b' => ['B3'], 'c' => 'new C', 'd' => 'D'], 'Y' => ['H' => 'I'], 'Z' => ['Q' => 'R']];
 
     /**
      * Test the namesake method
@@ -96,6 +96,7 @@ class ArrayUtilsTest extends TestCase
         $this->assertEquals(['B1', 'B2', 'B3'], $result['X']['b']);
         $this->assertEquals('new C', $result['X']['c']);
         $this->assertEquals('D', $result['X']['d']);
+        $this->assertEquals(['H' => 'I'], $result['Y']);
         $this->assertArrayHasKey('Q', $result['Z']);
         $this->assertEquals('R', $result['Z']['Q']);
     }
