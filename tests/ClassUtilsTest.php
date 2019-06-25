@@ -47,4 +47,12 @@ class ClassUtilsTest extends TestCase
         $className = ClassUtils::getLocalClassName(__CLASS__);
         $this->assertEquals(__CLASS__, ClassUtils::findFQClassName($className, [__NAMESPACE__]));
     }
+
+    /**
+     * Test the namesake method
+     */
+    public function testFindFQClassNameUnknown()
+    {
+        $this->assertNull(ClassUtils::findFQClassName('Exception', [__NAMESPACE__]));
+    }
 }
