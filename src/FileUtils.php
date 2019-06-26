@@ -42,10 +42,14 @@ class FileUtils
 
         $bytes = (int)$match[1];
         switch ($match[2] ?? '') {
-            case 'K': return $bytes * 1024;
-            case 'M': return $bytes * 1024**2;
-            case 'G': return $bytes * 1024**3;
-            default : return $bytes;
+            case 'K':
+                return $bytes * 1024;
+            case 'M':
+                return $bytes * 1024 ** 2;
+            case 'G':
+                return $bytes * 1024 ** 3;
+            default:
+                return $bytes;
         }
     }
 

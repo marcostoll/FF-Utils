@@ -103,11 +103,11 @@ class ArrayUtils
             $isAssoc1 = self::isAssoc($arr1[$key]);
             $isAssoc2 = self::isAssoc($value2);
             switch (true) {
-                case $isAssoc1 != $isAssoc2 :
+                case $isAssoc1 != $isAssoc2:
                     // array types differ -> replace value in first array
                     $arr1[$key] = $value2;
                     break;
-                case !$isAssoc1 && !$isAssoc2 :
+                case !$isAssoc1 && !$isAssoc2:
                     // both numeric arrays
                     if (($strategy & self::MERGE_STRATEGY_NUMERIC_APPEND) > 0) {
                         $arr1[$key] = array_merge($arr1[$key], $value2); // append second to first
@@ -115,11 +115,11 @@ class ArrayUtils
                         $arr1[$key] = array_merge($value2, $arr1[$key]); // prepend second to first
                     }
                     break;
-                case $isAssoc1 && $isAssoc2 :
+                case $isAssoc1 && $isAssoc2:
                     // both associative arrays -> start recursion
                     $arr1[$key] = self::merge($arr1[$key], $value2, $strategy);
                     break;
-                default :
+                default:
                     break;
             }
         }

@@ -30,7 +30,9 @@ class ClassUtils
     {
         foreach ($namespaces as $ns) {
             $fqClassName = self::normalizeNamespace($ns) . '\\' . $className;
-            if (class_exists($fqClassName)) return $fqClassName;
+            if (class_exists($fqClassName)) {
+                return $fqClassName;
+            }
         }
 
         return null;
