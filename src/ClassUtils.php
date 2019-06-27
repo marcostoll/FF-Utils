@@ -28,8 +28,8 @@ class ClassUtils
      */
     public static function findFQClassName(string $className, array $namespaces = []): ?string
     {
-        foreach ($namespaces as $ns) {
-            $fqClassName = self::normalizeNamespace($ns) . '\\' . $className;
+        foreach ($namespaces as $namespace) {
+            $fqClassName = self::normalizeNamespace($namespace) . '\\' . $className;
             if (class_exists($fqClassName)) {
                 return $fqClassName;
             }
@@ -43,12 +43,12 @@ class ClassUtils
      *
      * Replaces slashes with backslashes. Trims leading and trailing backslashes.
      *
-     * @param string $ns
+     * @param string $namespace
      * @return string
      */
-    public static function normalizeNamespace(string $ns): string
+    public static function normalizeNamespace(string $namespace): string
     {
-        return trim(str_replace('/', '\\', $ns), '\\');
+        return trim(str_replace('/', '\\', $namespace), '\\');
     }
 
     /**
