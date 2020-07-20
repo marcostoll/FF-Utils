@@ -18,15 +18,6 @@ namespace FF\Utils;
 class ArrayUtils
 {
     /**
-     * Merge strategies (bit mask)
-     */
-    const MERGE_STRATEGY_ASSOC_REPLACE = 1;
-    const MERGE_STRATEGY_ASSOC_PRESERVE = 2;
-    const MERGE_STRATEGY_NUMERIC_APPEND = 4;
-    const MERGE_STRATEGY_NUMERIC_PREPEND = 8;
-    const MERGE_STRATEGY_DEFAULT = 5;
-
-    /**
      * Checks whether the given array is a numeric array
      *
      * Numeric indexed must have a starting index 0 and use consecutively numbered
